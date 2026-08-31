@@ -1,7 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
 
-/* Default Theme Variables (White) */
 :root {
     --bg-color: #ffffff;
     --text-color: #111111;
@@ -11,21 +9,18 @@
     --body-bg: #ffffff;
 }
 
-/* Black Theme */
 body.theme-black {
     --bg-color: #000000;
     --text-color: #ffffff;
     --body-bg: #000000;
 }
 
-/* Yellow Theme */
 body.theme-yellow {
     --bg-color: #ffcc00;
     --text-color: #1a1a1a;
     --body-bg: #ffcc00;
 }
 
-/* Glassmorphism Theme */
 body.theme-glass {
     --text-color: #ffffff;
     --glass-bg: rgba(255, 255, 255, 0.1);
@@ -35,7 +30,6 @@ body.theme-glass {
     --bg-color: #615d75
 }
 
-/* Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -43,6 +37,11 @@ body.theme-glass {
     transition: background 0.4s ease, color 0.4s ease;
 }
 
+@media only screen and (max-width:515px) {
+    .buttons {
+        font-size: 10px;
+    }
+}
 body {
     display: flex;
     justify-content: center;
@@ -54,7 +53,6 @@ body {
     position: relative;
 }
 
-/* Controls (Top Right) */
 .controls {
     position: absolute;
     top: 20px;
@@ -73,8 +71,6 @@ select, button {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-weight: bold;
-    opacity: 0.6;
-    transition: opacity 0.5s;
     font-family: 'consolas';
 }
 
@@ -82,7 +78,6 @@ select, button:hover {
     opacity: 1;
 }
 
-/* Main Clock Container */
 .clock-container {
     text-align: center;
     background: var(--glass-bg);
@@ -94,7 +89,6 @@ select, button:hover {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-/* Font Classes */
 .font-roboto {
     font-family: 'Roboto Mono', monospace;
 }
@@ -107,7 +101,6 @@ select, button:hover {
     font-family: 'Space Mono', monospace;
 }
 
-/* Typography */
 #time {
     font-size: 10vw;
     font-weight: 700;
@@ -123,7 +116,14 @@ select, button:hover {
     letter-spacing: 2px;
 }
 
-/* Responsive sizing for mobile */
+.support {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+
+
 @media (max-width: 768px) {
     #time {
         font-size: 15vw;
@@ -141,6 +141,7 @@ select, button:hover {
         top: 10px;
         right: 10px;
         flex-wrap: wrap;
-        justify-content: flex-end;
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -10,23 +10,22 @@
 </head>
 <body class="theme-white font-roboto">
 
-    <!-- UI Controls -->
     <div class="controls">
         <select id="theme-selector" onchange="changeTheme()">
-            <option value="theme-white">White</option>
-            <option value="theme-black">Black</option>
-            <option value="theme-yellow">Yellow</option>
-            <option value="theme-glass">Glassy</option>
+            <option class="buttons" value="theme-white">White</option>
+            <option class="buttons" value="theme-black">Black</option>
+            <option class="buttons" value="theme-yellow">Yellow</option>
+            <option class="buttons" value="theme-glass">Glassy</option>
         </select>
         
         <select id="font-selector" onchange="changeFont()">
-            <option value="font-roboto">Roboto Mono</option>
-            <option value="font-orbitron">Orbitron</option>
-            <option value="font-space">Space Mono</option>
+            <option class="buttons" value="font-roboto">Roboto Mono</option>
+            <option class="buttons" value="font-orbitron">Orbitron</option>
+            <option class="buttons" value="font-space">Space Mono</option>
         </select>
 
         <button id="fullscreen-btn" onclick="toggleFullscreen()">⛶ Go Fullscreen</button>
-        <a href="https://shubhgw.github.io/buymeacoke/" target="_blank" style="font-family: consolas; color: var(--text-color); font-size: 20px; padding-top: 10px;">Gift us</a>
+        <a class="support" href="https://shubhgw.github.io/buymeacoke/" target="_blank" style="font-family: consolas; color: var(--text-color); text-decoration: none;">Support us</a>
     </div>
 
     <!-- Clock Display -->
